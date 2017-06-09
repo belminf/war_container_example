@@ -1,0 +1,3 @@
+NAME = my-web-app
+VERSION = 1.0
+WAR_NAME = ROOT
