@@ -5,14 +5,13 @@ include Env
 all: build build-war build-docker
 
 build:
-	apt-get install -y --no-install-recommends maven
 	build-war
-	build-docker	
 
 build-docker:
 	docker build -t $(NAME):$(VERSION) --build-arg NAME=$(NAME) --build-arg WAR_NAME=$(WAR_NAME) .
 
 build-war:
+	apt-get install -y --no-install-recommends maven
 	mvn package -f $(NAME)
 
 clean:
