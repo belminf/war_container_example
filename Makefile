@@ -5,6 +5,7 @@ include Env
 all: build build-war build-docker
 
 build:
+	apt-get install -y --no-install-recommends maven
 	build-war
 	build-docker	
 
