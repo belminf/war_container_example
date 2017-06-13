@@ -1,10 +1,10 @@
 include Env
 
-.PHONY: all build
+.PHONY: all build-docker build-java
 
-all: build build-docker
+all: build-docker build-java
 
-build:
+build-java:
 	mvn package -f $(NAME)
 
 build-docker:
