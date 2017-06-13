@@ -5,7 +5,6 @@ include Env
 all: build build-docker
 
 build:
-	apt-get install -y --no-install-recommends maven
 	mvn package -f $(NAME)
 
 build-docker:
